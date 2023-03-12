@@ -73,7 +73,7 @@ class LEAR(object):
         for h in range(24):
 
             # Estimating lambda hyperparameter using LARS
-            param_model = LassoLarsIC(criterion='aic', max_iter=2500, random_state=42)
+            param_model = LassoLarsIC(criterion='aic', max_iter=2500)
             param = param_model.fit(Xtrain, Ytrain[:, h]).alpha_
 
             # Re-calibrating LEAR using standard LASSO estimation technique
